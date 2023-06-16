@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/74c0b98a-dd74-45b5-a1c5-356d71aae9b4/resourceGroups/test/providers/Microsoft.Web/sites/Entegrity-bill-handler",
+    "appService.deploySubpath": "."
+}
