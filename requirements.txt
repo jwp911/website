@@ -1,7 +1,10 @@
 flask
-flask_sqlalchemy
-flask_bcrypt
-flask_login
 flask_wtf
 wtforms
+flask_login
+pillow
+flask_mail
+flask_sqlalchemy
+flask_bcrypt
 datetime
+itsdangerous

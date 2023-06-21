@@ -1,11 +1,11 @@
 {% extends 'layout.html' %}
 {% block content %}
-    <div class = 'content-section'>
+    <div class = 'content-format'>
         <form method = 'POST' action = ''>
             {{ form.hidden_tag() }}
             <fieldset class = 'form-group'>
                 <legend class = 'border-bottom' mb-4>Enter your log-in information</legend>
-                <div class='form-group'>
+                <div class = 'form-group'>
                     {{ form.email.label(class = 'form-control-label') }}
                     {% if form.email.errors %}
                         {{ form.email(class = 'form-control form-control-lg is-invalid') }}
@@ -18,7 +18,7 @@
                         {{ form.email(class = 'form-control form-control-lg') }}
                     {% endif %}
                 </div>
-                <div class='form-group'>
+                <div class = 'form-group'>
                     {{ form.password.label(class = 'form-control-label') }}
                     {% if form.password.errors %}
                         {{ form.password(class = 'form-control form-control-lg is-invalid') }}
@@ -37,16 +37,17 @@
                 </div>
             </fieldset>
             <div class = 'form-group'>
-                {{ form.submit(class = 'btn btn-outline-button') }}
+                {{ form.submit(class = 'button-format') }}
+                <small class = 'text-muted' ml-2>
+                    <a href = '{{ url_for("user_bp.reset_request") }}'>Forgot Password?</a>
+                </small>
             </div>
-            <small class = 'text-muted' ml-2>
-                <a href = '#'>Forgot Password?</a>
-            </small>
+            
         </form>    
     </div>
     <div class = 'border-top pt-3'>
         <small class = 'text-muted'>
-            Need to make an account? <a class = 'ml-2' href = '{{ url_for("register") }}'>Sign up</a>
+            Need to make an account? <a class = 'ml-2' href = '{{ url_for("user_bp.register") }}'>Sign up</a>
         </small>
     </div>
 {% endblock content %}
